@@ -11,6 +11,10 @@ function viewMobileMenu() {
     }
 }
 
+function viewMobileMenu2(){
+	document.getElementById("myTopnav").classList.toggle("responsive");
+}
+
 //DROPDOWN MENU
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -22,12 +26,28 @@ function openCloseDropdown() {
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
 
+  	console.log('sono fuori dal dropdown');
+
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
+      }
+    }
+  };
+
+  if ((!event.target.matches('.icon')) && (!event.target.matches('.dropbtn'))) {
+
+  	console.log('ci sono');
+
+    var dropdowns = document.getElementsByClassName("topnav");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('responsive')) {
+        openDropdown.classList.remove('responsive');
       }
     }
   }
