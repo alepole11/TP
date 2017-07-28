@@ -2,78 +2,83 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Titolo Pagina</title><!--Titolo sulla TAB del Browser-->
+		<title>Tecnopesa</title><!--Titolo sulla TAB del Browser-->
 		<!--<link rel="shortcut icon" type="image/x-icon" href="">Favicon 16px png-->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"><!--file di stile predefinito-->
 
-		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet"> <!--Font di Google: importante posizionarlo qui!-->
+		<!--Font di Google: importante posizionarlo qui!-->
 
 		<link rel="stylesheet" type="text/css" href="css/main.css"> <!--foglio di stile principale-->
 		<link rel="stylesheet" type="text/css" href="css/responsive.css"> <!--foglio di stile responsive-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Fondamentale per il rendering sugli schermi!!!-->
 
-		
-	    <script src="js/jquery-1.7.1.min.js"></script>
-	    <!-- JavaScript necessario per il menu che rende opaco il resto del sito-->
-	    <script>
-	    	$(document).ready(function(){     
-			//When btn is clicked
-			$(".icona-menu").click(function() {
-				$(".main-menu").toggleClass("show");
-				/*$(".effetto-opaco").toggleClass("show");  SE COMMENTATO, TOGLIE L'EFFETTO OPACIZZANTE*/
-			});  
-	    });
-	    </script>
-	    <!--Javascript per il submenu-->
-	    <script>
-	    	$(document).ready(function(){   	    
-			//When btn is clicked
-			$(".parent-menu").click(function() {
-				$(".child-menu").toggleClass("show");
-			});  
-	    });
-	    </script>
-
 	</head>
 	<body>
 		<div class="container">
-			<!--TESTATA-->
 			<header class="clearfix">
-					<a href="index.html" id=logo>
-						<h1>Titolo</h1>
-						<h2>Sottotitolo</h2>
-					</a>
-				<div class="container-icona-menu"><img src="img/template/icona-menu.png" class="icona-menu"></div>
-				<div class="effetto-opaco"></div>
+				<a href="index.html" id=logo>
+					<h1>Tecnopesa</h1>
+					<h2>Bilance | Affettatrici | Attrezzature Negozi | Registratori di Cassa</h2>
+				</a>
 			</header>
-			<!--MENU PRINCIPALE-->
-			<nav class="main-menu">
-				<ul>
-					<li><a href="#">Link1</a></li>
-					
-					<div class="sub-menu">
 
-						<li class="parent-menu"><a href="#">Link2</a></li> <!--aggiungi class="selected" per avere il link evidenziato sulla pagina attiva-->
-						<div class="child-menu">
-							<li><a href="#">SubLink1</a></li>
-							<li><a href="#">SubLink2</a></li>
-							<li><a href="#">SubLink3</a></li>
-						</div>
-
-					</div>
-
-					<li><a href="#">Link3</a></li>
-				</ul>
-			</nav>
-
-			<!--CORPO PAGINA-->
-			<div class="wrapper clearfix"> <!--inserito dopo per racchiudere-->
-				<section>
-					<p>Contenuto Body</p>
-				</section>
+			<div class="topnav" id="myTopnav">
+				<a href="#home">Home</a>
+				<a href="#news">News</a>
+				<a href="#contact">Contact</a>
+				<a href="#about">About</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 			</div>
-		</div>
-		<!--FOOTER-->
+
+			<div class="wrapper clearfix"> <!--inserito dopo per racchiudere-->
+
+				<section class="paragrafo-testo">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</section>
+
+				<!--Parallax-->
+				<div class="banner1"></div>
+				<div class="post-banner"></div>
+
+				<section id=biografia>
+					<a name="anchor-biografia"></a>
+					<h3>Biografia</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</section>
+
+				<!--Parallax-->
+				<div class="banner2"></div>
+				<div class="post-banner"></div>
+
+				<section id=container-contatti>
+					<div class="info-contatti clearfix">
+					<a name="anchor-info"></a>
+						<div id=info>
+							<h3>Info</h3>
+							<p>blablabla</p>
+						</div>
+						<div id=contatti>
+							<h3>Contatti</h3>
+							<ul id=contact-info>
+								<li class="indirizzo"><a href="">Indirizzo</a></li>
+								<li class="telefono"><a href="tel:+393487495307"> telefono</a></li>
+								<li class="email"><a href="mailto:scarox@libero.it"> email</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id=map>
+						<h3>Mappa</h3>
+						<div id="mappa-google"></div>
+						<div id="post-mappa-google"></div>
+					</div>
+				</section>
+				
+					<img onclick="ScrollToTopFunction()" id="scrollToTopBtn" src="img/template/scroll-to-top.png">
+				
+			</div> <!--Wrapper-->
+
+		</div> <!--Container per sticky footer-->
+
 		<footer>
 			<div class="social-copyright">
 				<a href="index.html" target="blank">
@@ -82,8 +87,50 @@
 				<a href="index.html" target="blank">
 					<img src="img/template/logo-instagram.png" alt="Logo Instagram" class=icona-social>
 				</a>
-				<p>&copy; 2017 Copyright</p>
+				<p>&copy; 2017 Tecnopesa s.a.s.</p>
 			</div>
 		</footer>
+
+		<!--CHIAMATA FUNZIONI DA ATTIVARE ALLO SCORRIMENTO PAGINA-->
+		<script>
+		document.onscroll = function() {
+		    		/*myFunction();*/
+		    		//console.log('partito onscroll');
+					displayToTopBtn();
+		    		if (effettoDelay('#biografia')) {
+		    			/*console.log('ho ricevuto true dalla funzione per BIOGRAFIA');*/
+		    			document.getElementById('biografia').style.opacity = '1';
+		    		};
+		    		if (effettoDelay('#container-contatti')) {
+		    			/*console.log('ho ricevuto true dalla funzione per CONTAINER-CONTATTI');*/
+		    			document.getElementById('container-contatti').style.opacity = '1';
+		    		};
+		    	}
+		</script>
+
+		<!--INCLUSIONE JAVASCRIPT DEDICATI ED ESTERNI-->
+	    <script src="js/jquery-1.7.1.min.js"></script>
+	    <script src="js/myjslibrary.js"></script>
+
+		<!--GOOGLE MAPS-->	    
+	    <script async defer
+	    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAffyboKUfaFQ2sryzpnTMWvBk0_AY1g-M&callback=initMap">
+		</script>
+		<script>
+
+	      function initMap() {
+	        var uluru = {lat: 45.615297, lng: 9.371823};
+	        var map = new google.maps.Map(document.getElementById('mappa-google'), {
+	          zoom: 10,
+	          center: uluru
+	        });
+	        var marker = new google.maps.Marker({
+	          position: uluru,
+	          map: map
+	        });
+	      }
+	    </script>
+	    
+
 	</body>
 </html>

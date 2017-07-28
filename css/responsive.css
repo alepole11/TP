@@ -1,142 +1,22 @@
-/******************************************************************* VERSIONE SMARTPHONE ***********************/
-
-@media screen and (min-width: 250px) and (max-width: 660px){
-
-	/******************************************
-	HEADER
-	*******************************************/
-
-	header {
-		background-color: yellow;
-		background-repeat: no-repeat;
-		height: 192px;
-	}
-
-	h1{
-		font-size: 4.2em;
-	}
-
-	h2{
-		font-size: 1.2em; 
-	}
-
-	.container-icona-menu{
-		position: absolute;
-		top: 1%;
-		right: 1%;
-		text-align: right;
-		padding-top: 10px;
-	}
-
-	.icona-menu{
-		cursor: pointer;
-		width: 35px;
-		z-index: 10;
-		position: relative;
-		margin-left: 0;
-		text-align: center;
-	}
-
-
-	/******************************************
-	NAV
-	*******************************************/
-
-	nav{
-		padding: 5px 0;
-		display: none;
-		position: absolute;
-		z-index: 10;
-	}
-
-	nav li{
-		display: block; /*mostro verticalmente i box model*/
-		padding: 3%;
-	}
-
-	.sub-menu {
-		display: block;
-	}
-
-	.child-menu{
-		position: relative;
-	}
-
-
-
-
-	/******************************************
-	FOOTER
-	*******************************************/
-
-	footer{
-		background-color: yellow;
-		/*background-image: url("../img/template/footer-mobile.jpg");
-		background-repeat: no-repeat;
-		height: 136px;*/
-	}
-
-	.social-copyright{
-		padding-top: 30px;
-	}
-
-	.icona-social{
-		width: 35px;
-		height: 35px;
-	}
-
-}
-
-/******************************************************************* VERSIONE TABLET ***********************/
-
-@media screen and (min-width: 661px) and (max-width: 900px) {
-
-	/******************************************
-	HEADER
-	*******************************************/
-
-	header {
-		background-color: green;
-		background-repeat: no-repeat;
-		height: 192px;
-	}
-
-	h1{
-		font-size: 7.0em;
-	}
-
-	h2{
-		font-size: 2.0em; 
-	}
-
-	.container-icona-menu{
-		display: none;
-	}
-
-	/******************************************
-	FOOTER
-	*******************************************/
-
-	.social-copyright{
-		padding-top: 50px;
-	}
-
-	footer{
-		background-color: green;
-	}
-	
-
-}
-
-/******************************************************************* VERSIONE DESKTOP ***********************/
-
-@media screen and (min-width: 901px){
-
-
-	.container-icona-menu{
-		display: none;
-	}
-
-
-
+@media screen and (max-width: 600px) {
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+    Show the link that contains should open and close the topnav (.icon) */
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+  This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
