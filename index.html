@@ -22,12 +22,24 @@
 				</a>
 			</header>
 
-			<div class="topnav" id="myTopnav">
+			<div class="topnav clearfix" id="myTopnav">
 				<a href="#home">Home</a>
 				<a href="#news">News</a>
 				<a href="#contact">Contact</a>
+				
+
+				<div class="dropdown">
+					<a onclick="openCloseDropdown()" class="dropbtn">Dropdown</a>
+						<div id="myDropdown" class="dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+						</div>
+				</div>
+
 				<a href="#about">About</a>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+				<a href="javascript:void(0);" class="icon" onclick="viewMobileMenu()">&#9776;</a>
 			</div>
 
 			<div class="wrapper clearfix"> <!--inserito dopo per racchiudere-->
@@ -83,7 +95,7 @@
 					</div>
 				</section>
 				
-					<img onclick="ScrollToTopFunction()" id="scrollToTopBtn" src="img/template/scroll-to-top.png">
+				<img onclick="ScrollToTopFunction()" id="scrollToTopBtn" src="img/template/scroll-to-top.png">
 				
 			</div> <!--Wrapper-->
 
@@ -91,12 +103,6 @@
 
 		<footer>
 			<div class="social-copyright">
-				<a href="index.html" target="blank">
-					<img src="img/template/logo-facebook.png" alt="Logo Facebook" class=icona-social>
-				</a>
-				<a href="index.html" target="blank">
-					<img src="img/template/logo-instagram.png" alt="Logo Instagram" class=icona-social>
-				</a>
 				<p>&copy; 2017 Tecnopesa s.a.s.</p>
 			</div>
 		</footer>
